@@ -4,8 +4,10 @@ import { Slot, useRouter } from "expo-router";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import * as Linking from "expo-linking";
+import Toast from "react-native-toast-message";
 import { AuthProvider } from "../src/contexts/AuthContext";
 import { ShoppingListsProvider } from "../src/contexts/ShoppingListsContext";
+import { ShoppingItemsProvider } from "../src/contexts/ShoppingItemsContext";
 
 function InitialLayout() {
   const router = useRouter();
@@ -47,8 +49,11 @@ export default function RootLayout() {
     <SafeAreaProvider>
       <AuthProvider>
         <ShoppingListsProvider>
-          <StatusBar style="auto" />
-          <InitialLayout />
+          <ShoppingItemsProvider>
+            <StatusBar style="auto" />
+            <InitialLayout />
+            <Toast />
+          </ShoppingItemsProvider>
         </ShoppingListsProvider>
       </AuthProvider>
     </SafeAreaProvider>

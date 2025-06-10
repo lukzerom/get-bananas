@@ -11,7 +11,7 @@ import { Link, useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useAuth } from "../src/contexts/AuthContext";
 import { useShoppingLists } from "../src/contexts/ShoppingListsContext";
-import { ProtectedRoute } from "../src/components/auth";
+import { ProtectedRoute } from "../src/guards/AuthGuard";
 import { ShoppingList } from "../src/types";
 import { COLORS, SPACING, TYPOGRAPHY } from "../src/constants";
 

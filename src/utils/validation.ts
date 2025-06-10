@@ -63,7 +63,7 @@ export const createItemSchema = yup.object({
     .string()
     .max(200, "Description must be less than 200 characters")
     .trim()
-    .optional(),
+    .default(""),
   quantity: yup
     .number()
     .required("Quantity is required")
@@ -74,12 +74,12 @@ export const createItemSchema = yup.object({
     .string()
     .max(20, "Unit must be less than 20 characters")
     .trim()
-    .optional(),
+    .default(""),
   category: yup
     .string()
     .max(50, "Category must be less than 50 characters")
     .trim()
-    .optional(),
+    .default(""),
 });
 
 // Type definitions for form data

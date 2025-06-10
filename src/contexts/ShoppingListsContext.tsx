@@ -7,7 +7,7 @@ const ShoppingListsContext = createContext<
   ShoppingListsContextType | undefined
 >(undefined);
 
-export function useShoppingLists() {
+export const useShoppingLists = () => {
   const context = useContext(ShoppingListsContext);
   if (context === undefined) {
     throw new Error(
@@ -15,15 +15,15 @@ export function useShoppingLists() {
     );
   }
   return context;
-}
+};
 
 interface ShoppingListsProviderProps {
   children: React.ReactNode;
 }
 
-export function ShoppingListsProvider({
+export const ShoppingListsProvider = ({
   children,
-}: ShoppingListsProviderProps) {
+}: ShoppingListsProviderProps) => {
   const { user } = useAuth();
   const [lists, setLists] = useState<ShoppingList[]>([]);
   const [currentList, setCurrentList] = useState<ShoppingList | null>(null);
@@ -234,4 +234,4 @@ export function ShoppingListsProvider({
       {children}
     </ShoppingListsContext.Provider>
   );
-}
+};

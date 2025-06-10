@@ -13,24 +13,52 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lukzerom.getbananas",
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "Zezwól aplikacji $(PRODUCT_NAME) na używanie rozpoznawania mowy.",
+        "NSMicrophoneUsageDescription": "Zezwól aplikacji $(PRODUCT_NAME) na używanie mikrofonu do rozpoznawania mowy."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": ["android.permission.RECORD_AUDIO"],
+      "package": "com.lukzerom.getbananas"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router",
+      [
+        "@siteed/expo-audio-studio",
+        {
+          "enablePhoneStateHandling": true,
+          "enableNotifications": false,
+          "enableBackgroundAudio": true,
+          "iosConfig": {
+            "allowBackgroundAudioControls": false,
+            "backgroundProcessingTitle": "Voice Recording",
+            "microphoneUsageDescription": "This app needs microphone access to record voice commands for shopping list management."
+          }
+        }
+      ]
+    ],
     "experiments": {
       "typedRoutes": true
     },
-    "scheme": "get-bananas"
+    "scheme": "get-bananas",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "47e9ac97-5174-49a3-8957-2ec05db8f5bc"
+      }
+    }
   }
 }

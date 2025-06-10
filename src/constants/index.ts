@@ -7,31 +7,41 @@ export const SUPABASE_ANON_KEY =
 export const APP_NAME = "Get Bananas";
 export const APP_VERSION = "1.0.0";
 
-// Theme Colors
+// Theme Colors - Banana inspired!
 export const COLORS = {
   light: {
-    primary: "#007AFF",
-    secondary: "#5856D6",
-    background: "#FFFFFF",
-    surface: "#F2F2F7",
-    text: "#000000",
-    textSecondary: "#6D6D70",
-    border: "#C7C7CC",
-    error: "#FF3B30",
-    success: "#34C759",
-    warning: "#FF9500",
+    primary: "#FFD700", // Vibrant yellow like bananas
+    secondary: "#FF6B47", // Orange-coral like the logo background
+    accent: "#FF8C42", // Warm orange
+    background: "#FFFEF7", // Warm white with slight yellow tint
+    surface: "#FFF9E6", // Light yellow surface
+    text: "#2D1810", // Dark brown for contrast
+    textSecondary: "#8B6914", // Golden brown
+    border: "#FFE066", // Light yellow border
+    error: "#FF4757", // Vibrant red-orange
+    success: "#2ED573", // Fresh green
+    warning: "#FF6348", // Orange-red
+    // New colors for voice features
+    listening: "#FF6B47", // Orange when listening
+    processing: "#FFD700", // Yellow when processing
+    mic: "#FF8C42", // Accent orange for mic icon
   },
   dark: {
-    primary: "#0A84FF",
-    secondary: "#5E5CE6",
-    background: "#000000",
-    surface: "#1C1C1E",
-    text: "#FFFFFF",
-    textSecondary: "#98989D",
-    border: "#38383A",
-    error: "#FF453A",
-    success: "#30D158",
-    warning: "#FF9F0A",
+    primary: "#FFE066", // Softer yellow for dark mode
+    secondary: "#FF7F50", // Coral for dark mode
+    accent: "#FF9A56", // Lighter orange
+    background: "#1A1A1A", // Dark background
+    surface: "#2D2D2D", // Dark surface
+    text: "#FFFFFF", // White text
+    textSecondary: "#CCCCCC", // Light gray
+    border: "#404040", // Dark border
+    error: "#FF6B6B", // Light red
+    success: "#51CF66", // Light green
+    warning: "#FF8C42", // Orange
+    // New colors for voice features
+    listening: "#FF7F50", // Orange when listening
+    processing: "#FFE066", // Yellow when processing
+    mic: "#FF9A56", // Accent orange for mic icon
   },
 };
 
@@ -73,18 +83,24 @@ export const TYPOGRAPHY = {
   },
 };
 
-// Default Categories
+// Default Categories - Updated with banana-inspired colors
 export const DEFAULT_CATEGORIES = [
-  { name: "Fruits & Vegetables", color: "#34C759", icon: "🥕" },
-  { name: "Dairy & Eggs", color: "#FFCC02", icon: "🥛" },
-  { name: "Meat & Seafood", color: "#FF3B30", icon: "🥩" },
-  { name: "Bakery", color: "#FF9500", icon: "🍞" },
-  { name: "Pantry", color: "#8E8E93", icon: "🥫" },
-  { name: "Frozen", color: "#00C7BE", icon: "🧊" },
-  { name: "Beverages", color: "#007AFF", icon: "🥤" },
-  { name: "Snacks", color: "#5856D6", icon: "🍿" },
-  { name: "Health & Beauty", color: "#AF52DE", icon: "🧴" },
-  { name: "Household", color: "#A2845E", icon: "🧽" },
+  { name: "Fruits & Vegetables", color: "#2ED573", icon: "🥕" },
+  { name: "Dairy & Eggs", color: "#FFD700", icon: "🥛" },
+  { name: "Meat & Seafood", color: "#FF4757", icon: "🥩" },
+  { name: "Bakery", color: "#FF8C42", icon: "🍞" },
+  { name: "Pantry", color: "#8B6914", icon: "🥫" },
+  { name: "Frozen", color: "#74B9FF", icon: "🧊" },
+  { name: "Beverages", color: "#6C5CE7", icon: "🥤" },
+  { name: "Snacks", color: "#FF6B47", icon: "🍿" },
+  { name: "Health & Beauty", color: "#A29BFE", icon: "🧴" },
+  { name: "Household", color: "#FDCB6E", icon: "🧽" },
+  { name: "Pet Food", color: "#E17055", icon: "🐕" },
+  { name: "Baby & Kids", color: "#FF9FF3", icon: "👶" },
+  { name: "Breakfast & Cereal", color: "#FFE066", icon: "🥣" },
+  { name: "Condiments & Sauces", color: "#D63031", icon: "🍯" },
+  { name: "Deli & Prepared Foods", color: "#00B894", icon: "🥪" },
+  { name: "International Foods", color: "#B2BEC3", icon: "🌍" },
 ];
 
 // Storage Keys

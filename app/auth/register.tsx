@@ -15,7 +15,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useAuth } from "../../src/contexts/AuthContext";
-import { PublicRoute } from "../../src/components/auth";
+import { PublicRoute } from "../../src/guards/AuthGuard";
 import { FormInput } from "../../src/components/ui/FormInput";
 import { registerSchema, RegisterFormData } from "../../src/utils/validation";
 import { COLORS, SPACING, TYPOGRAPHY } from "../../src/constants";

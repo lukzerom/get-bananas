@@ -18,7 +18,7 @@ interface FormInputProps<T extends FieldValues>
   isRequired?: boolean;
 }
 
-export function FormInput<T extends FieldValues>({
+export const FormInput = <T extends FieldValues>({
   control,
   name,
   label,
@@ -26,7 +26,7 @@ export function FormInput<T extends FieldValues>({
   isRequired = false,
   style,
   ...textInputProps
-}: FormInputProps<T>) {
+}: FormInputProps<T>) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>
@@ -50,7 +50,7 @@ export function FormInput<T extends FieldValues>({
       {error && <Text style={styles.errorText}>{error}</Text>}
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
